@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:57201",
-      "sslPort": 44395
+      "applicationUrl": "http://localhost:22922",
+      "sslPort": 44378
     }
   },
   "profiles": {
-    "MMABOOKSRESTAPI": {
+    "BreweryInventoryAPI": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7280;http://localhost:5276",
+      "applicationUrl": "https://localhost:7055;http://localhost:5123",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -4,19 +4,18 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ADD CORS POLICY - IN A PRODUCTION APP LOCK THIS DOWN!
-builder.Services.AddCors(Options => { Options.AddDefaultPolicy (
-    builder => { builder.AllowAnyOrigin()
+builder.Services.AddCors(Options => {
+    Options.AddDefaultPolicy(
+    builder => {
+        builder.AllowAnyOrigin()
         .WithMethods("POST", "PUT", "DELETE", "GET", "OPTIONS")
         .AllowAnyHeader();
     });
 });
 
-// ADDING THE DBCONTEXT TO THE SERVICE
-builder.Services.AddDbContext<BreweryInventoryContext>();
-
 // Add services to the container.
 
+builder.Services.AddDbContext<BreweryInventoryContext>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

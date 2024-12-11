@@ -24,9 +24,9 @@ namespace BreweryInventoryNUnit
         [Test]
         public void TestGetRecipeById()
         {
-            r = dbContext.Find("")
-            Assert.IsNotNull(recipes);
-            Assert.AreEqual(4, recipes.Count);
+            r = dbContext.Recipes.Find(1);
+            Assert.IsNotNull(r);
+            Assert.AreEqual(4, r.RecipeId);
         }
     }
 }
